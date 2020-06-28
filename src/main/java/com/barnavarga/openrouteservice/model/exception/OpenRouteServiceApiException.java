@@ -10,22 +10,26 @@ import lombok.Getter;
 public class OpenRouteServiceApiException extends OpenRouteServiceException
 {
 	private ErrorType errorType;
+	private String description;
 
-	public OpenRouteServiceApiException(final ErrorType errorType)
+	public OpenRouteServiceApiException(final ErrorType errorType, final String description)
 	{
-		super(errorType.getMessage());
+		super(errorType.getMessage() + "\n" + description);
 		this.errorType = errorType;
+		this.description = description;
 	}
 
-	public OpenRouteServiceApiException(final ErrorType errorType, final String message)
+	public OpenRouteServiceApiException(final ErrorType errorType, final String message, final String description)
 	{
-		super(message);
+		super(message + "\n" + description);
 		this.errorType = errorType;
+		this.description = description;
 	}
 
-	public OpenRouteServiceApiException(final ErrorType errorType, final String message, final Throwable cause)
+	public OpenRouteServiceApiException(final ErrorType errorType, final String message, final String description, final Throwable cause)
 	{
-		super(message, cause);
+		super(message + "\n" + description, cause);
 		this.errorType = errorType;
+		this.description = description;
 	}
 }

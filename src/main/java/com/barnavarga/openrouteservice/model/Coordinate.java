@@ -1,5 +1,7 @@
 package com.barnavarga.openrouteservice.model;
 
+import com.barnavarga.openrouteservice.util.CoordinateSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,6 +16,7 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode
+@JsonSerialize(using = CoordinateSerializer.class)
 public class Coordinate implements Serializable
 {
 	private double latitude;

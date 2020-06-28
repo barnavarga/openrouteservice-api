@@ -52,15 +52,16 @@ public class OpenRouteServiceClient
 	{
 		try (final Response response = HTTP_CLIENT.newCall(request.toRequest(SCHEME, HOST, getApiKey())).execute())
 		{
+			final ResponseBody responseBody = response.body();
 			if (response.isSuccessful())
 			{
-				final ResponseBody responseBody = response.body();
 				return responseBody != null ? OBJECT_MAPPER_THREAD_LOCAL.get().readValue(responseBody.string(), request.getResponseClass()) : null;
 			}
 			else
 			{
+				final String rawResponseBody = responseBody != null ? responseBody.string() : null;
 				final ErrorType errorType = ErrorUtil.findErrorTypeByStatusCode(response.code());
-				throw new OpenRouteServiceApiException(errorType);
+				throw new OpenRouteServiceApiException(errorType, rawResponseBody);
 			}
 		} catch (final IOException e)
 		{
