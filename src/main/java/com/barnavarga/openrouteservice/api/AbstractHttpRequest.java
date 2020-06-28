@@ -1,6 +1,5 @@
 package com.barnavarga.openrouteservice.api;
 
-import com.barnavarga.openrouteservice.model.AbstractResponse;
 import com.barnavarga.openrouteservice.model.enums.HttpMethod;
 import lombok.Getter;
 import okhttp3.Request;
@@ -13,7 +12,7 @@ import java.util.Map;
  * @author bvarga and created on 2020. 06. 28..
  */
 @Getter
-public abstract class AbstractHttpRequest<Response extends AbstractResponse> implements Serializable
+public abstract class AbstractHttpRequest<Response extends Serializable> implements Serializable
 {
 	private final String path;
 	private final HttpMethod httpMethod;

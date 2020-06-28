@@ -1,17 +1,17 @@
 package com.barnavarga.openrouteservice.api;
 
-import com.barnavarga.openrouteservice.model.BasicDirectionResponse;
 import com.barnavarga.openrouteservice.model.Coordinate;
 import com.barnavarga.openrouteservice.model.enums.RouteProfile;
+import org.geojson.FeatureCollection;
 
 /**
  * @author bvarga and created on 2020. 06. 28..
  */
-public class BasicDirectionHttpRequest extends AbstractGetHttpRequest<BasicDirectionResponse>
+public class BasicDirectionHttpRequest extends AbstractGetHttpRequest<FeatureCollection>
 {
 	public BasicDirectionHttpRequest(final RouteProfile profile)
 	{
-		super("/v2/directions/" + profile.getValue(), BasicDirectionResponse.class);
+		super("/v2/directions/" + profile.getValue(), FeatureCollection.class);
 	}
 
 	public BasicDirectionHttpRequest start(final Coordinate start)

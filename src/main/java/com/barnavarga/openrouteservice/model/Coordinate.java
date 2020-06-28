@@ -34,7 +34,7 @@ public class Coordinate implements Serializable
 	@Override
 	public String toString()
 	{
-		return latitude + "," + longitude;
+		return longitude + "," + latitude;
 	}
 
 	public static Coordinate valueOf(final double latitude, final double longitude)
