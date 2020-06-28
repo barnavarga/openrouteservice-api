@@ -1,6 +1,6 @@
 package com.barnavarga.openrouteservice.util;
 
-import com.barnavarga.openrouteservice.model.response.Pair;
+import com.barnavarga.openrouteservice.model.Pair;
 import okhttp3.MediaType;
 
 /**

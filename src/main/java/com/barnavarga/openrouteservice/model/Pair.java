@@ -1,4 +1,4 @@
-package com.barnavarga.openrouteservice.model.response;
+package com.barnavarga.openrouteservice.model;
 
 import lombok.EqualsAndHashCode;
 
