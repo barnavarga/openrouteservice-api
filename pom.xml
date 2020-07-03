@@ -9,6 +9,41 @@
 	<version>0.0.1</version>
 
 	<name>openrouteservice-api</name>
+	<description>Java library that provides implementation of Open Route Service endpoints.</description>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://github.com/barboose/openrouteservice-api/blob/master/LICENSE</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>barboose</id>
+			<name>Barna Varga</name>
+			<email>barna.varga@tuta.io</email>
+			<organization>Varga Barna E.V.</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Budapest</timezone>
+		</developer>
+	</developers>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/barboose/openrouteservice-api/issues</url>
+	</issueManagement>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/barboose/openrouteservice-api</url>
+		</repository>
+	</distributionManagement>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -127,6 +162,5 @@
 				</executions>
 			</plugin>
 		</plugins>
-
 	</build>
 </project>
