@@ -1,0 +1,13 @@
+{
+  "error": {
+    "code": 2010,
+    "message": "Could not find point 1: 46.6840769 17.3053840 within a radius of 350.0 meters.; Could not find point 0: 46.6900557 17.2991067 within a radius of 350.0 meters."
+  },
+  "info": {
+    "engine": {
+      "version": "6.1.1",
+      "build_date": "2020-06-18T15:14:48Z"
+    },
+    "timestamp": 1593815024918
+  }
+}

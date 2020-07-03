@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "bbox": [
+        17.299113,
+        46.683907,
+        17.305388,
+        46.690598
+      ],
+      "type": "Feature",
+      "properties": {
+        "segments": [
+          {
+            "distance": 1236.1,
+            "duration": 121.9,
+            "steps": [
+              {
+                "distance": 311.1,
+                "duration": 37.3,
+                "type": 11,
+                "instruction": "Head east on Egry József utca",
+                "name": "Egry József utca",
+                "way_points": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "distance": 758.4,
+                "duration": 54.6,
+                "type": 3,
+                "instruction": "Turn sharp right onto Csillagvár utca, 75101",
+                "name": "Csillagvár utca, 75101",
+                "way_points": [
+                  2,
+                  14
+                ]
+              },
+              {
+                "distance": 166.6,
+                "duration": 30.0,
+                "type": 0,
+                "instruction": "Turn left onto Béke utca",
+                "name": "Béke utca",
+                "way_points": [
+                  14,
+                  15
+                ]
+              },
+              {
+                "distance": 0.0,
+                "duration": 0.0,
+                "type": 10,
+                "instruction": "Arrive at Béke utca, on the left",
+                "name": "-",
+                "way_points": [
+                  15,
+                  15
+                ]
+              }
+            ]
+          }
+        ],
+        "summary": {
+          "distance": 1236.1,
+          "duration": 121.9
+        },
+        "way_points": [
+          0,
+          15
+        ]
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            17.299113,
+            46.690035
+          ],
+          [
+            17.30066,
+            46.690254
+          ],
+          [
+            17.303107,
+            46.690598
+          ],
+          [
+            17.303021,
+            46.689861
+          ],
+          [
+            17.302918,
+            46.689344
+          ],
+          [
+            17.302422,
+            46.688353
+          ],
+          [
+            17.302333,
+            46.687822
+          ],
+          [
+            17.302403,
+            46.687004
+          ],
+          [
+            17.302488,
+            46.686633
+          ],
+          [
+            17.302564,
+            46.686425
+          ],
+          [
+            17.302586,
+            46.686364
+          ],
+          [
+            17.302934,
+            46.68547
+          ],
+          [
+            17.303129,
+            46.684761
+          ],
+          [
+            17.303232,
+            46.684111
+          ],
+          [
+            17.303214,
+            46.683907
+          ],
+          [
+            17.305388,
+            46.68405
+          ]
+        ],
+        "type": "LineString"
+      }
+    }
+  ],
+  "bbox": [
+    17.299113,
+    46.683907,
+    17.305388,
+    46.690598
+  ],
+  "metadata": {
+    "attribution": "openrouteservice.org | OpenStreetMap contributors",
+    "service": "routing",
+    "timestamp": 1593813083364,
+    "query": {
+      "coordinates": [
+        [
+          17.2991067,
+          46.6900557
+        ],
+        [
+          17.305384,
+          46.6840769
+        ]
+      ],
+      "profile": "driving-car",
+      "format": "json"
+    },
+    "engine": {
+      "version": "6.1.1",
+      "build_date": "2020-06-18T15:14:48Z",
+      "graph_date": "1970-01-01T00:00:00Z"
+    }
+  }
+}

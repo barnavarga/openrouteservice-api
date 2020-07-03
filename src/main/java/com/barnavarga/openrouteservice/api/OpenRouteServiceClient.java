@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import org.apache.logging.log4j.LogManager;
@@ -50,7 +51,7 @@ public class OpenRouteServiceClient
 
 	public <ResponseType extends Serializable> ResponseType execute(final AbstractHttpRequest<ResponseType> request) throws OpenRouteServiceException
 	{
-		try (final Response response = HTTP_CLIENT.newCall(request.toRequest(SCHEME, HOST, getApiKey())).execute())
+		try (final Response response = sendRequest(request.toRequest(SCHEME, HOST, getApiKey())))
 		{
 			final ResponseBody responseBody = response.body();
 			if (response.isSuccessful())
@@ -68,5 +69,10 @@ public class OpenRouteServiceClient
 			logger.error(e.getMessage(), e);
 			throw new OpenRouteServiceProcessException("Cannot process OpenRoute Service response, check details or the log for more information!", e);
 		}
+	}
+
+	protected Response sendRequest(final Request request) throws IOException
+	{
+		return HTTP_CLIENT.newCall(request).execute();
 	}
 }
