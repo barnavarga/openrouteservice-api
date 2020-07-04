@@ -6,7 +6,7 @@
 
 	<groupId>com.barnavarga</groupId>
 	<artifactId>openrouteservice-api</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 
 	<name>openrouteservice-api</name>
 	<description>Java library that provides implementation of Open Route Service endpoints.</description>

@@ -42,7 +42,6 @@ public abstract class AbstractPostHttpRequest<Body extends Serializable, Respons
 		try
 		{
 			final String rawRequestBody = OBJECT_MAPPER_THREAD_LOCAL.get().writeValueAsString(body);
-			logger.info("Raw request body: " + rawRequestBody);
 			final RequestBody requestBody = RequestBody.create(rawRequestBody, Const.Request.JSON);
 			return new Request.Builder().url(urlBuilder.build())
 					.addHeader(Const.Header.AUTHORIZATION, apiKey)
