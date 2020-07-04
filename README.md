@@ -16,22 +16,21 @@ How to use
 -------
 * **Directions...**
    * ...between strictly two locations and returning `FeatureCollection` (https://geojson.org/):
-```
-final BasicDirectionHttpRequest basicDirectionHttpRequest = new BasicDirectionHttpRequest(RouteProfile.CAR)
-		.start(Coordinate.valueOf(46.6900557, 17.2991067))
-		.end(Coordinate.valueOf(46.6840769, 17.305384));
-final FeatureCollection response = new OpenRouteServiceClient("{{apiKey}}").execute(basicDirectionHttpRequest);
-```
-   
+	```
+	final BasicDirectionHttpRequest basicDirectionHttpRequest = new BasicDirectionHttpRequest(RouteProfile.CAR)
+			.start(Coordinate.valueOf(46.6900557, 17.2991067))
+			.end(Coordinate.valueOf(46.6840769, 17.305384));
+	final FeatureCollection response = new OpenRouteServiceClient("{{apiKey}}").execute(basicDirectionHttpRequest);
+	```
    * ...between two or more locations: 
-```
-final WaypointDirectionBody requestBody = WaypointDirectionBody.builder().coordinates(Arrays.asList(
-        Coordinate.valueOf(46.692986, 17.294576),
-		Coordinate.valueOf(46.6900557, 17.2991067),
-		Coordinate.valueOf(46.6840769, 17.305384))).build();
-final WaypointDirectionHttpRequest httpRequest = new WaypointDirectionHttpRequest(RouteProfile.CAR).setRequestBody(requestBody);
-final WaypointDirectionResponse response = new OpenRouteServiceClient("{{apiKey}}").execute(httpRequest);
-```
+	```
+	final WaypointDirectionBody requestBody = WaypointDirectionBody.builder().coordinates(Arrays.asList(
+		Coordinate.valueOf(46.692986, 17.294576),
+			Coordinate.valueOf(46.6900557, 17.2991067),
+			Coordinate.valueOf(46.6840769, 17.305384))).build();
+	final WaypointDirectionHttpRequest httpRequest = new WaypointDirectionHttpRequest(RouteProfile.CAR).setRequestBody(requestBody);
+	final WaypointDirectionResponse response = new OpenRouteServiceClient("{{apiKey}}").execute(httpRequest);
+	```
 
 Technologies
 -------
