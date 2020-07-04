@@ -42,7 +42,7 @@ Maven
 <dependency>
   <groupId>com.barnavarga</groupId>
   <artifactId>openrouteservice-api</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 </dependency>
 ```
 
