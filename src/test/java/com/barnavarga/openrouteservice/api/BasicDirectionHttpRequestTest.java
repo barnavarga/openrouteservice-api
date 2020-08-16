@@ -24,8 +24,8 @@ public class BasicDirectionHttpRequestTest
 		assertEquals(FeatureCollection.class, basicDirectionHttpRequest.getResponseClass());
 		final Map<String, String> requestParameters = basicDirectionHttpRequest.getRequestParameters();
 		assertNotNull(requestParameters);
-		assertTrue(requestParameters.containsKey("start"), "Request parameters must be contains `start` parameter");
-		assertTrue(requestParameters.containsKey("end"), "Request parameters must be contains `end` parameter");
+		assertTrue(requestParameters.containsKey("start"), "Request parameters must contains `start` attribute");
+		assertTrue(requestParameters.containsKey("end"), "Request parameters must contains `end` attribute");
 		assertEquals(start.toString(), requestParameters.get("start"));
 		assertEquals(end.toString(), requestParameters.get("end"));
 	}
