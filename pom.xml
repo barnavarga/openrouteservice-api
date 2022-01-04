@@ -54,7 +54,7 @@
 		<mockito.version>3.3.3</mockito.version>
 		<lombok.version>1.18.12</lombok.version>
 		<lombok.plugin.version>1.18.12.0</lombok.plugin.version>
-		<log4j.version>2.15.0</log4j.version>
+		<log4j.version>2.17.1</log4j.version>
 	</properties>
 
 	<dependencies>
